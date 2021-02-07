@@ -1,0 +1,81 @@
+<div class="container">
+
+   <div class="jumbotron">
+
+    <h1 class="display-4">
+        Loan Management
+    </h1>
+    <hr>
+    <div class="row">
+
+        <div class="column">
+
+            <p>Build a stronger relationship with every customer.</p>
+				<h3>
+                   <u> See how Loan Management can help you :</u>
+                    <br>
+
+				</h3>
+				
+				<ul>
+					<li>Reach customers on any device and channel, whether by
+                        mobile, landline, email, or social.</li>
+                        <br>
+					<li>Intelligently task prioritisation and proactively address
+                        the most urgent cases first.</li>
+                        <br>
+					<li>Build rich customer profiles, including life event alerts
+                        that can be leveraged for additional sales</li>
+                        <br>
+                </ul>
+                <br>
+                <br>
+
+                Questions? Talk to an expert: <b>000 111 111 111</b>
+
+            </div>
+
+        <div class="column">
+
+            <form *ngIf ="!isLoggedIn" [formGroup]="myForm" (ngSubmit)="logIn()" >
+                
+                <div class="form-group">
+                    <h2>Login or SignUp</h2> 
+                </div>
+
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <br>
+                    <input type="text" formControlName="username"  id="username" required placeholder="UserName" name="username" class="form-control"/>
+                    <div class="alert alert-danger"
+                    role="alert" *ngIf=" !myForm.get('username').valid && myForm.get('username').touched">Username is required</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <br>
+                    <input type="password" id="password" formControlName="password" required placeholder="Password" name="password" class="form-control">
+                    <div class="alert alert-danger" role="alert" *ngIf=" !myForm.get('password').valid && myForm.get('password').touched">Password is required</div>
+                </div>
+                    
+                <div class="form-group">
+                    <button class="btn btn-primary" >Login</button>
+                </div>
+
+                <div class="form-group">
+                    <div class="alert alert-danger" role="alert" *ngIf="isLoginFailed">
+                      Login failed: {{ errorMessage }}
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <p>Don't Have Account? Contact Admin</p>
+                </div>
+
+            </form>
+        </div>
+    </div>	
+    </div>
+</div>
+
+

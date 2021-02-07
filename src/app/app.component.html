@@ -1,0 +1,34 @@
+<div class="back" [ngStyle]="{backgroundImage:'url(../assets/images/backg.jpg)'}">  
+  <div> 
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a routerLink="/home" class="navbar-brand" *ngIf="isLoggedIn">Loan Management :  {{username  | uppercase}} </a>
+        </div>
+    
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a routerLink="/login" (click)="logout()"  *ngIf="!isLoggedIn" class="login" >LOGIN </a></li>
+            <li><a routerLink="/searchLoan" *ngIf="isLoggedIn && !showAdmin"  class="user" > | Search Loan |</a></li>
+            <li><a routerLink="/addLoan" *ngIf="showAdmin" class="admin-add"> | Add Loan | </a></li>
+            <li><a routerLink="/updateLoan" *ngIf="showAdmin" class="admin-update"> | Update Loan |  </a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li> 
+              <a href class="logout" role="button" *ngIf="isLoggedIn" (click)="logout()">Logout  <span class="glyphicon glyphicon-log-out"></span></a>
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+    </nav>
+
+    <router-outlet></router-outlet>
+  </div>
+  <app-footer></app-footer>
+  
+</div>
+
+

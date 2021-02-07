@@ -1,0 +1,32 @@
+
+  p{
+    text-align: center;
+  }
+  a{
+    align-items: center;
+  }
+
+ a:hover {
+    font-size: large;
+    opacity: 2;
+    color:red;
+
+  }
+  .container{
+    min-height: 85vh;
+    min-width: 100vw;
+  }
+
+  .card-img-top{
+    width: 300px;
+    height: 300px; 
+  }
+
+  .row {
+    display: flex;
+    left: 50px;
+  }
+  
+  .column {
+    padding: 20px; 
+  }

@@ -1,0 +1,46 @@
+h1 {
+	padding: 20px 40px;
+    margin: 20px 0;
+    text-align: center;
+    color: black;
+    font-size: xx-large;
+    font-family: Cambria;
+}
+
+h3 {
+    text-align: center;
+}
+
+form {
+	border: 2px;
+	
+}
+
+.container {
+	min-height: 85vh;
+	min-width: 100vw;
+}
+
+input {
+	padding: 5px 5px;
+	margin: 7x 0;
+	display: inline-block;
+	border: 1px solidc transparent;
+	box-sizing: border-box;
+	color: black;
+}
+
+button {
+	background-color: #4CAF50;
+	color: white;
+	padding: 7px 7px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+}
+
+button:hover {
+	opacity: 0.8;
+	background-color: #0000FF;
+}

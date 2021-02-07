@@ -1,0 +1,49 @@
+<div class="container">
+
+<div class="jumbotron jumbotron-fluid">
+    <h2 class="display-4"> 
+      Choose Your Action 
+    </h2>
+</div>
+
+<div class="card-deck">
+  <div class="row">
+
+    <div class="column" *ngIf="showAdmin">
+      <div class="card">
+        <img class="card-img-top"  src="../assets/images/admin.jpg" >
+        <div class="card-body">
+          <h2 class="card-title">Admin</h2>
+          <h3 class="card-text">Add Loan For the User.</h3>
+          <a class="admin" routerLink="/addLoan">Add Loan</a>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="column" *ngIf="isLoggedIn && !showAdmin">
+      <div class="card">
+       <img class="card-img-top"src="../assets/images/user.jpg"  >
+        <div class="card-body">
+          <h2 class="card-title">Users</h2>
+          <h3 class="card-text">Find Your Loan</h3>
+          <a class="user" routerLink="/searchLoan">Click</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="column" *ngIf="showAdmin">
+      <div class="card">
+        <img class="card-img-top" src="../assets/images/admin.jpg" >
+          <div class="card-body">
+            <h2 class="card-title">Admin</h2>
+            <h3 class="card-text">Update loan Values For User</h3>
+            <a class="admin" routerLink="/updateLoan">Update Loan</a>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
