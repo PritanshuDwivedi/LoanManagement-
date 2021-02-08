@@ -9,7 +9,7 @@ import { Loans } from './loans';
 
 export class LoanService {
 
-  url='http://localhost:8083/loan';
+  url='https://loanmanagement-loan.azurewebsites.net/loan';
   
   constructor(private _http:HttpClient) { }
 

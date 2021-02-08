@@ -10,7 +10,7 @@ import { User } from './user.model';
 export class UserService {
 
   user: User = new User();
-  readonly url: string = 'http://localhost:8084/authapp'
+  readonly url: string = 'https://authentication-microservice-auth.azurewebsites.net/authapp'
 
   constructor(private http: HttpClient) { }
 
